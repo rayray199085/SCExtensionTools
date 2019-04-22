@@ -55,7 +55,7 @@ class SCNetworkManager{
             completion(
                 dataResponse.result.value,
                 dataResponse.result.isSuccess,
-                dataResponse.response?.statusCode ?? -1,
+                dataResponse.response?.statusCode ?? 403,
                 dataResponse.result.error)
         }
     }
