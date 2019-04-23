@@ -31,6 +31,7 @@
 		0D0004C8226AFB5D00BB073D /* UIColor+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0004B1226AFB5D00BB073D /* UIColor+SCAddition.m */; };
 		0D0004CD226AFCD600BB073D /* FFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0004CC226AFCD600BB073D /* FFLabel.swift */; };
 		0D4478BC226D44890036D572 /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4478BB226D44890036D572 /* UIApplication+extension.swift */; };
+		0D7D3583226E95AE00533698 /* WKWebView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D3582226E95AE00533698 /* WKWebView+extension.swift */; };
 		CC6FB0EAC6D50EA45AE5FF16 /* Pods_SCExtensionTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A95F153DD3747B827ABE7DF /* Pods_SCExtensionTools.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		0D0004C9226AFB7C00BB073D /* Tools-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tools-Bridge.h"; sourceTree = "<group>"; };
 		0D0004CC226AFCD600BB073D /* FFLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFLabel.swift; sourceTree = "<group>"; };
 		0D4478BB226D44890036D572 /* UIApplication+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
+		0D7D3582226E95AE00533698 /* WKWebView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+extension.swift"; sourceTree = "<group>"; };
 		5A95F153DD3747B827ABE7DF /* Pods_SCExtensionTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCExtensionTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F73A235179230F2CF7DCDA /* Pods-SCExtensionTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCExtensionTools.release.xcconfig"; path = "Target Support Files/Pods-SCExtensionTools/Pods-SCExtensionTools.release.xcconfig"; sourceTree = "<group>"; };
 		FF337841E7EB36999BCA1476 /* Pods-SCExtensionTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCExtensionTools.debug.xcconfig"; path = "Target Support Files/Pods-SCExtensionTools/Pods-SCExtensionTools.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				0D0004A1226AFB5D00BB073D /* String+extension.swift */,
 				0D0004A2226AFB5D00BB073D /* UIPageControl+extension.swift */,
 				0D0004A3226AFB5D00BB073D /* UIBarButtonItem+extension.swift */,
+				0D7D3582226E95AE00533698 /* WKWebView+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				0D0004B8226AFB5D00BB073D /* UIImageView+extension.swift in Sources */,
 				0D000469226AFA8F00BB073D /* AppDelegate.swift in Sources */,
 				0D0004BF226AFB5D00BB073D /* UIPageControl+extension.swift in Sources */,
+				0D7D3583226E95AE00533698 /* WKWebView+extension.swift in Sources */,
 				0D0004BB226AFB5D00BB073D /* UILabel+extension.swift in Sources */,
 				0D0004C2226AFB5D00BB073D /* NSObject+SCAddition.m in Sources */,
 			);
