@@ -51,7 +51,7 @@ class SCNetworkManager{
     ///   - params: parameters in dictionary
     ///   - completion: json(array/ dictionary), isSuccess, error
     func request(urlString:String, method:HTTPMethod, params:[String:Any]?, completion :@escaping (_ response: Any?,_ isSuccess: Bool, _ statusCode: Int,_ error: Error?)->() ){
-        Alamofire.request(urlString, method: HTTPMethod.get, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (dataResponse) in
+        Alamofire.request(urlString, method: method, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (dataResponse) in
             completion(
                 dataResponse.result.value,
                 dataResponse.result.isSuccess,
