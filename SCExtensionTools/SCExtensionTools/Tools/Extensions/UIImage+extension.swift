@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SDWebImage
 
 extension UIImage{
     
@@ -52,16 +53,23 @@ extension UIImage{
         let path = UIBezierPath(ovalIn: rect)
         path.addClip()
         draw(in: rect)
-
+        
         if hasFrame{
             let ovalPath = UIBezierPath(ovalIn: rect)
             frameColor.setStroke()
             ovalPath.lineWidth = 2
             ovalPath.stroke()
         }
-
+        
         let result = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return result
+    }
+}
+extension UIImage{
+    static func downloadImage(url: URL, completion: @escaping (_ image: UIImage?)->()){
+        SDWebImageManager.shared().loadImage(with: url, options: [], progress: nil) { (image, _, _, _, _, _) in
+            completion(image)
+        }
     }
 }

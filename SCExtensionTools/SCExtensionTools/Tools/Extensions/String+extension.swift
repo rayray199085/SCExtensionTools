@@ -101,3 +101,25 @@ extension String{
         return maxFont - 1
     }
 }
+
+extension String{
+    
+    /// Int digits to string
+    ///
+    /// - Parameters:
+    ///   - count: optional count number
+    ///   - defaultString: default string
+    /// - Returns: if number >= 1000, return 1.0k
+    static func transformDigitsToString(count: Int?,defaultString: String)->String{
+        guard let count = count else{
+            return defaultString
+        }
+        if count == 0{
+            return defaultString
+        }
+        if count >= 1000{
+            return String(format: "%.1lfk", Float(count)/1000)
+        }
+        return "\(count)"
+    }
+}
