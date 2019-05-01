@@ -123,3 +123,9 @@ extension String{
         return "\(count)"
     }
 }
+// MARK: - calculate label size by string
+extension String{
+    func getTextHeight(size: CGSize, font: UIFont)->CGFloat{
+        return (self as NSString).sizeOfText(withMaxSize: size, andWith: font).height
+    }
+}
