@@ -7,4 +7,5 @@ target 'SCExtensionTools' do
 
 pod "SDWebImage"
 pod "Alamofire"
+pod "pop"
 end

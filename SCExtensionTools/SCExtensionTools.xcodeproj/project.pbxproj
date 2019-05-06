@@ -30,6 +30,7 @@
 		0D0004C7226AFB5D00BB073D /* UILabel+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0004AF226AFB5D00BB073D /* UILabel+SCAddition.m */; };
 		0D0004C8226AFB5D00BB073D /* UIColor+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0004B1226AFB5D00BB073D /* UIColor+SCAddition.m */; };
 		0D0004CD226AFCD600BB073D /* FFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0004CC226AFCD600BB073D /* FFLabel.swift */; };
+		0D3652342280227600C2ECC6 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3652332280227600C2ECC6 /* UIView+extension.swift */; };
 		0D4478BC226D44890036D572 /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4478BB226D44890036D572 /* UIApplication+extension.swift */; };
 		0D7D3583226E95AE00533698 /* WKWebView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D3582226E95AE00533698 /* WKWebView+extension.swift */; };
 		0DFB4FF8227978EE00A3AF63 /* UITableViewCell+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB4FF7227978ED00A3AF63 /* UITableViewCell+extension.swift */; };
@@ -93,6 +94,7 @@
 		0D0004B5226AFB5D00BB073D /* NSString+SCAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SCAddition.h"; sourceTree = "<group>"; };
 		0D0004C9226AFB7C00BB073D /* Tools-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tools-Bridge.h"; sourceTree = "<group>"; };
 		0D0004CC226AFCD600BB073D /* FFLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFLabel.swift; sourceTree = "<group>"; };
+		0D3652332280227600C2ECC6 /* UIView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		0D4478BB226D44890036D572 /* UIApplication+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
 		0D7D3582226E95AE00533698 /* WKWebView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+extension.swift"; sourceTree = "<group>"; };
 		0DFB4FF7227978ED00A3AF63 /* UITableViewCell+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+extension.swift"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				0D0004A1226AFB5D00BB073D /* String+extension.swift */,
 				0D0004A2226AFB5D00BB073D /* UIPageControl+extension.swift */,
 				0D0004A3226AFB5D00BB073D /* UIBarButtonItem+extension.swift */,
+				0D3652332280227600C2ECC6 /* UIView+extension.swift */,
 				0D7D3582226E95AE00533698 /* WKWebView+extension.swift */,
 				0DFB4FF7227978ED00A3AF63 /* UITableViewCell+extension.swift */,
 			);
@@ -434,6 +437,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-SCExtensionTools/Pods-SCExtensionTools-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -441,6 +445,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -472,6 +477,7 @@
 				0D0004C6226AFB5D00BB073D /* CABasicAnimation+SCAddition.m in Sources */,
 				0D0004BE226AFB5D00BB073D /* String+extension.swift in Sources */,
 				0D0004B8226AFB5D00BB073D /* UIImageView+extension.swift in Sources */,
+				0D3652342280227600C2ECC6 /* UIView+extension.swift in Sources */,
 				0D000469226AFA8F00BB073D /* AppDelegate.swift in Sources */,
 				0D0004BF226AFB5D00BB073D /* UIPageControl+extension.swift in Sources */,
 				0D7D3583226E95AE00533698 /* WKWebView+extension.swift in Sources */,
