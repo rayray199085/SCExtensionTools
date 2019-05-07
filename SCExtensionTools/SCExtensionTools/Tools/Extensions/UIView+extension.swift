@@ -47,4 +47,20 @@ extension UIView{
         anim?.completionBlock = completionBlock
         layer.pop_add(anim, forKey: nil)
     }
+    
+    /// Add pop scaleXY animation
+    ///
+    /// - Parameters:
+    ///   - fromValue: init scale
+    ///   - toValue: final scale
+    ///   - duration: duration
+    ///   - completionBlock: completionBlock
+    func addPopScaleAnimation(fromValue: CGFloat = 1, toValue: CGFloat, duration: CFTimeInterval,completionBlock: ((POPAnimation?, Bool) -> Void)? = nil){
+        let anim = POPBasicAnimation(propertyNamed: kPOPViewScaleXY)
+        anim?.fromValue = NSValue(cgPoint: CGPoint(x: fromValue, y: fromValue))
+        anim?.toValue = NSValue(cgPoint: CGPoint(x: toValue, y: toValue))
+        anim?.duration = duration
+        anim?.completionBlock = completionBlock
+        pop_add(anim, forKey: nil)
+    }
 }
