@@ -15,7 +15,7 @@ public protocol FFLabelDelegate: NSObjectProtocol {
 
 public class FFLabel: UILabel {
 
-    public var linkTextColor = UIColor.blue
+    public var linkTextColor = UIColor(displayP3Red: 61.0 / 255, green: 89.0 / 255, blue: 147.0 / 255, alpha: 1.0)
     public var selectedBackgroudColor = UIColor.lightGray
     public weak var labelDelegate: FFLabelDelegate?
     

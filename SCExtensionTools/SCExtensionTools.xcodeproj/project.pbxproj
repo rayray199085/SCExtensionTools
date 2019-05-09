@@ -30,6 +30,8 @@
 		0D0004C7226AFB5D00BB073D /* UILabel+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0004AF226AFB5D00BB073D /* UILabel+SCAddition.m */; };
 		0D0004C8226AFB5D00BB073D /* UIColor+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0004B1226AFB5D00BB073D /* UIColor+SCAddition.m */; };
 		0D0004CD226AFCD600BB073D /* FFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0004CC226AFCD600BB073D /* FFLabel.swift */; };
+		0D1F699E2283A3170092CAB0 /* NSAttributedString+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1F699D2283A3170092CAB0 /* NSAttributedString+extension.swift */; };
+		0D1F69D222840F110092CAB0 /* UINavigationController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1F69D122840F110092CAB0 /* UINavigationController+extension.swift */; };
 		0D3652342280227600C2ECC6 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3652332280227600C2ECC6 /* UIView+extension.swift */; };
 		0D4478BC226D44890036D572 /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4478BB226D44890036D572 /* UIApplication+extension.swift */; };
 		0D7D3583226E95AE00533698 /* WKWebView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D3582226E95AE00533698 /* WKWebView+extension.swift */; };
@@ -95,6 +97,8 @@
 		0D0004B5226AFB5D00BB073D /* NSString+SCAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SCAddition.h"; sourceTree = "<group>"; };
 		0D0004C9226AFB7C00BB073D /* Tools-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tools-Bridge.h"; sourceTree = "<group>"; };
 		0D0004CC226AFCD600BB073D /* FFLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFLabel.swift; sourceTree = "<group>"; };
+		0D1F699D2283A3170092CAB0 /* NSAttributedString+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+extension.swift"; sourceTree = "<group>"; };
+		0D1F69D122840F110092CAB0 /* UINavigationController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+extension.swift"; sourceTree = "<group>"; };
 		0D3652332280227600C2ECC6 /* UIView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		0D4478BB226D44890036D572 /* UIApplication+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
 		0D7D3582226E95AE00533698 /* WKWebView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+extension.swift"; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 		0D00049A226AFB5D00BB073D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0D1F69D122840F110092CAB0 /* UINavigationController+extension.swift */,
+				0D1F699D2283A3170092CAB0 /* NSAttributedString+extension.swift */,
 				0D96B76922815699004B161B /* UITableView+extension.swift */,
 				0D4478BB226D44890036D572 /* UIApplication+extension.swift */,
 				0D00049B226AFB5D00BB073D /* UIImageView+extension.swift */,
@@ -477,6 +483,7 @@
 				0D0004C0226AFB5D00BB073D /* UIBarButtonItem+extension.swift in Sources */,
 				0D0004BC226AFB5D00BB073D /* UIImage+extension.swift in Sources */,
 				0D0004B9226AFB5D00BB073D /* UIWindow+extension.swift in Sources */,
+				0D1F699E2283A3170092CAB0 /* NSAttributedString+extension.swift in Sources */,
 				0D0004C6226AFB5D00BB073D /* CABasicAnimation+SCAddition.m in Sources */,
 				0D0004BE226AFB5D00BB073D /* String+extension.swift in Sources */,
 				0D0004B8226AFB5D00BB073D /* UIImageView+extension.swift in Sources */,
@@ -485,6 +492,7 @@
 				0D0004BF226AFB5D00BB073D /* UIPageControl+extension.swift in Sources */,
 				0D7D3583226E95AE00533698 /* WKWebView+extension.swift in Sources */,
 				0D96B76A22815699004B161B /* UITableView+extension.swift in Sources */,
+				0D1F69D222840F110092CAB0 /* UINavigationController+extension.swift in Sources */,
 				0D0004BB226AFB5D00BB073D /* UILabel+extension.swift in Sources */,
 				0D0004C2226AFB5D00BB073D /* NSObject+SCAddition.m in Sources */,
 			);
