@@ -36,6 +36,8 @@
 		0D4478BC226D44890036D572 /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4478BB226D44890036D572 /* UIApplication+extension.swift */; };
 		0D7D3583226E95AE00533698 /* WKWebView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D3582226E95AE00533698 /* WKWebView+extension.swift */; };
 		0D96B76A22815699004B161B /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D96B76922815699004B161B /* UITableView+extension.swift */; };
+		0DBE24712289560D00B6BE75 /* SCSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE246F2289560D00B6BE75 /* SCSQLiteManager.swift */; };
+		0DBE24722289560D00B6BE75 /* mydata.sql in Resources */ = {isa = PBXBuildFile; fileRef = 0DBE24702289560D00B6BE75 /* mydata.sql */; };
 		0DEE54EF2285543A0045FE6C /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE54EE2285543A0045FE6C /* UIViewController+extension.swift */; };
 		0DFB4FF8227978EE00A3AF63 /* UITableViewCell+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB4FF7227978ED00A3AF63 /* UITableViewCell+extension.swift */; };
 		CC6FB0EAC6D50EA45AE5FF16 /* Pods_SCExtensionTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A95F153DD3747B827ABE7DF /* Pods_SCExtensionTools.framework */; };
@@ -104,6 +106,8 @@
 		0D4478BB226D44890036D572 /* UIApplication+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
 		0D7D3582226E95AE00533698 /* WKWebView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+extension.swift"; sourceTree = "<group>"; };
 		0D96B76922815699004B161B /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
+		0DBE246F2289560D00B6BE75 /* SCSQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCSQLiteManager.swift; sourceTree = "<group>"; };
+		0DBE24702289560D00B6BE75 /* mydata.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mydata.sql; sourceTree = "<group>"; };
 		0DEE54EE2285543A0045FE6C /* UIViewController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		0DFB4FF7227978ED00A3AF63 /* UITableViewCell+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+extension.swift"; sourceTree = "<group>"; };
 		5A95F153DD3747B827ABE7DF /* Pods_SCExtensionTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCExtensionTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,9 +197,10 @@
 			isa = PBXGroup;
 			children = (
 				0D0004A4226AFB5D00BB073D /* Additions */,
-				0D0004CA226AFCD600BB073D /* FFLabel */,
 				0D00049A226AFB5D00BB073D /* Extensions */,
+				0D0004CA226AFCD600BB073D /* FFLabel */,
 				0D000497226AFB5D00BB073D /* Network */,
+				0DBE246E2289560D00B6BE75 /* SQLite */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -270,6 +275,15 @@
 				0D0004CC226AFCD600BB073D /* FFLabel.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		0DBE246E2289560D00B6BE75 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				0DBE246F2289560D00B6BE75 /* SCSQLiteManager.swift */,
+				0DBE24702289560D00B6BE75 /* mydata.sql */,
+			);
+			path = SQLite;
 			sourceTree = "<group>";
 		};
 		965F72486D67A12B311819FC /* Pods */ = {
@@ -395,6 +409,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DBE24722289560D00B6BE75 /* mydata.sql in Resources */,
 				0D000470226AFA9300BB073D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +463,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SCExtensionTools/Pods-SCExtensionTools-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
@@ -456,6 +472,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
@@ -479,6 +496,7 @@
 				0D0004C5226AFB5D00BB073D /* UIScreen+UISCreen_extenshion.m in Sources */,
 				0D0004C3226AFB5D00BB073D /* UIImageView+SCAddition.m in Sources */,
 				0D0004C8226AFB5D00BB073D /* UIColor+SCAddition.m in Sources */,
+				0DBE24712289560D00B6BE75 /* SCSQLiteManager.swift in Sources */,
 				0D0004BA226AFB5D00BB073D /* Date+extension.swift in Sources */,
 				0D0004C4226AFB5D00BB073D /* NSString+SCAddition.m in Sources */,
 				0D0004CD226AFCD600BB073D /* FFLabel.swift in Sources */,
