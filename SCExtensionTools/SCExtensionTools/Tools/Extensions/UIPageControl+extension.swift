@@ -14,11 +14,7 @@ extension UIPageControl{
     /// - Parameters:
     ///   - normalImage: normal image
     ///   - selectedImage: current image
-    func customIndicatorImages(normalImage:UIImage?, selectedImage:UIImage?){
-        guard let normalImage = normalImage,
-            let selectedImage = selectedImage else{
-                return
-        }
+    func setPageControlImages(normalImage: UIImage, selectedImage:UIImage){
         setValue(normalImage, forKey: "_pageImage")
         setValue(selectedImage, forKey: "_currentPageImage")
     }

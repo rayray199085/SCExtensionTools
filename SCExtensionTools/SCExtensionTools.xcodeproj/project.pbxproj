@@ -35,9 +35,11 @@
 		0D3652342280227600C2ECC6 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3652332280227600C2ECC6 /* UIView+extension.swift */; };
 		0D4478BC226D44890036D572 /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4478BB226D44890036D572 /* UIApplication+extension.swift */; };
 		0D7D3583226E95AE00533698 /* WKWebView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D3582226E95AE00533698 /* WKWebView+extension.swift */; };
+		0D8538532296A0F6002FC6B1 /* UITabBarController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8538522296A0F6002FC6B1 /* UITabBarController+extension.swift */; };
 		0D96B76A22815699004B161B /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D96B76922815699004B161B /* UITableView+extension.swift */; };
 		0DBE24712289560D00B6BE75 /* SCSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE246F2289560D00B6BE75 /* SCSQLiteManager.swift */; };
 		0DBE24722289560D00B6BE75 /* mydata.sql in Resources */ = {isa = PBXBuildFile; fileRef = 0DBE24702289560D00B6BE75 /* mydata.sql */; };
+		0DCD701422B373520036A3D1 /* UIFont+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCD701322B373520036A3D1 /* UIFont+extension.swift */; };
 		0DEE54EF2285543A0045FE6C /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE54EE2285543A0045FE6C /* UIViewController+extension.swift */; };
 		0DFB4FF8227978EE00A3AF63 /* UITableViewCell+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB4FF7227978ED00A3AF63 /* UITableViewCell+extension.swift */; };
 		CC6FB0EAC6D50EA45AE5FF16 /* Pods_SCExtensionTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A95F153DD3747B827ABE7DF /* Pods_SCExtensionTools.framework */; };
@@ -105,9 +107,11 @@
 		0D3652332280227600C2ECC6 /* UIView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		0D4478BB226D44890036D572 /* UIApplication+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
 		0D7D3582226E95AE00533698 /* WKWebView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+extension.swift"; sourceTree = "<group>"; };
+		0D8538522296A0F6002FC6B1 /* UITabBarController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+extension.swift"; sourceTree = "<group>"; };
 		0D96B76922815699004B161B /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
 		0DBE246F2289560D00B6BE75 /* SCSQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCSQLiteManager.swift; sourceTree = "<group>"; };
 		0DBE24702289560D00B6BE75 /* mydata.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mydata.sql; sourceTree = "<group>"; };
+		0DCD701322B373520036A3D1 /* UIFont+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extension.swift"; sourceTree = "<group>"; };
 		0DEE54EE2285543A0045FE6C /* UIViewController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		0DFB4FF7227978ED00A3AF63 /* UITableViewCell+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+extension.swift"; sourceTree = "<group>"; };
 		5A95F153DD3747B827ABE7DF /* Pods_SCExtensionTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCExtensionTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,11 +232,13 @@
 				0D00049F226AFB5D00BB073D /* UIImage+extension.swift */,
 				0D0004A0226AFB5D00BB073D /* Bundle+extension.swift */,
 				0D0004A1226AFB5D00BB073D /* String+extension.swift */,
+				0D8538522296A0F6002FC6B1 /* UITabBarController+extension.swift */,
 				0D0004A2226AFB5D00BB073D /* UIPageControl+extension.swift */,
 				0D0004A3226AFB5D00BB073D /* UIBarButtonItem+extension.swift */,
 				0D3652332280227600C2ECC6 /* UIView+extension.swift */,
 				0D7D3582226E95AE00533698 /* WKWebView+extension.swift */,
 				0DFB4FF7227978ED00A3AF63 /* UITableViewCell+extension.swift */,
+				0DCD701322B373520036A3D1 /* UIFont+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -505,10 +511,12 @@
 				0D0004BC226AFB5D00BB073D /* UIImage+extension.swift in Sources */,
 				0D0004B9226AFB5D00BB073D /* UIWindow+extension.swift in Sources */,
 				0D1F699E2283A3170092CAB0 /* NSAttributedString+extension.swift in Sources */,
+				0DCD701422B373520036A3D1 /* UIFont+extension.swift in Sources */,
 				0DEE54EF2285543A0045FE6C /* UIViewController+extension.swift in Sources */,
 				0D0004C6226AFB5D00BB073D /* CABasicAnimation+SCAddition.m in Sources */,
 				0D0004BE226AFB5D00BB073D /* String+extension.swift in Sources */,
 				0D0004B8226AFB5D00BB073D /* UIImageView+extension.swift in Sources */,
+				0D8538532296A0F6002FC6B1 /* UITabBarController+extension.swift in Sources */,
 				0D3652342280227600C2ECC6 /* UIView+extension.swift in Sources */,
 				0D000469226AFA8F00BB073D /* AppDelegate.swift in Sources */,
 				0D0004BF226AFB5D00BB073D /* UIPageControl+extension.swift in Sources */,
