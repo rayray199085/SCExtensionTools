@@ -34,6 +34,13 @@
 		0D1F69D222840F110092CAB0 /* UINavigationController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1F69D122840F110092CAB0 /* UINavigationController+extension.swift */; };
 		0D3652342280227600C2ECC6 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3652332280227600C2ECC6 /* UIView+extension.swift */; };
 		0D4478BC226D44890036D572 /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4478BB226D44890036D572 /* UIApplication+extension.swift */; };
+		0D4598E722D809F7007D634C /* AppDelegate+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4598E622D809F7007D634C /* AppDelegate+extension.swift */; };
+		0D4598EC22D80BCA007D634C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4598EB22D80BCA007D634C /* CoreDataManager.swift */; };
+		0D4598F222D80D02007D634C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D4598F022D80D02007D634C /* Model.xcdatamodeld */; };
+		0D4598FE22D8116D007D634C /* MXCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4598FD22D8116D007D634C /* MXCornerRadius.m */; };
+		0D45990122D814C1007D634C /* UINavigationController+WJObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4598FF22D814C0007D634C /* UINavigationController+WJObjcSugar.m */; };
+		0D45990422D815A8007D634C /* UIColor+WJObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D45990222D815A8007D634C /* UIColor+WJObjcSugar.m */; };
+		0D48AA2422B5D439004F725E /* VCLLogingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D48AA2322B5D439004F725E /* VCLLogingViewController.swift */; };
 		0D7D3583226E95AE00533698 /* WKWebView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D3582226E95AE00533698 /* WKWebView+extension.swift */; };
 		0D8538532296A0F6002FC6B1 /* UITabBarController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8538522296A0F6002FC6B1 /* UITabBarController+extension.swift */; };
 		0D96B76A22815699004B161B /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D96B76922815699004B161B /* UITableView+extension.swift */; };
@@ -106,6 +113,16 @@
 		0D1F69D122840F110092CAB0 /* UINavigationController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+extension.swift"; sourceTree = "<group>"; };
 		0D3652332280227600C2ECC6 /* UIView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		0D4478BB226D44890036D572 /* UIApplication+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
+		0D4598E622D809F7007D634C /* AppDelegate+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+extension.swift"; sourceTree = "<group>"; };
+		0D4598EB22D80BCA007D634C /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		0D4598F122D80D02007D634C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		0D4598FC22D8116D007D634C /* MXCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXCornerRadius.h; sourceTree = "<group>"; };
+		0D4598FD22D8116D007D634C /* MXCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXCornerRadius.m; sourceTree = "<group>"; };
+		0D4598FF22D814C0007D634C /* UINavigationController+WJObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+WJObjcSugar.m"; sourceTree = "<group>"; };
+		0D45990022D814C0007D634C /* UINavigationController+WJObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+WJObjcSugar.h"; sourceTree = "<group>"; };
+		0D45990222D815A8007D634C /* UIColor+WJObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WJObjcSugar.m"; sourceTree = "<group>"; };
+		0D45990322D815A8007D634C /* UIColor+WJObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WJObjcSugar.h"; sourceTree = "<group>"; };
+		0D48AA2322B5D439004F725E /* VCLLogingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCLLogingViewController.swift; sourceTree = "<group>"; };
 		0D7D3582226E95AE00533698 /* WKWebView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+extension.swift"; sourceTree = "<group>"; };
 		0D8538522296A0F6002FC6B1 /* UITabBarController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+extension.swift"; sourceTree = "<group>"; };
 		0D96B76922815699004B161B /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
@@ -200,6 +217,9 @@
 		0D000496226AFB0400BB073D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0D4598FB22D8116D007D634C /* MXCornerRadius */,
+				0D4598EA22D80BB7007D634C /* CoreData */,
+				0D48AA2222B5D426004F725E /* LifeCycle */,
 				0D0004A4226AFB5D00BB073D /* Additions */,
 				0D00049A226AFB5D00BB073D /* Extensions */,
 				0D0004CA226AFCD600BB073D /* FFLabel */,
@@ -246,6 +266,10 @@
 		0D0004A4226AFB5D00BB073D /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				0D45990322D815A8007D634C /* UIColor+WJObjcSugar.h */,
+				0D45990222D815A8007D634C /* UIColor+WJObjcSugar.m */,
+				0D45990022D814C0007D634C /* UINavigationController+WJObjcSugar.h */,
+				0D4598FF22D814C0007D634C /* UINavigationController+WJObjcSugar.m */,
 				0D0004A5226AFB5D00BB073D /* UILabel+SCAddition.h */,
 				0D0004A6226AFB5D00BB073D /* CABasicAnimation+SCAddition.h */,
 				0D0004A7226AFB5D00BB073D /* UIScreen+SCAddition.h */,
@@ -281,6 +305,33 @@
 				0D0004CC226AFCD600BB073D /* FFLabel.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		0D4598EA22D80BB7007D634C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0D4598EB22D80BCA007D634C /* CoreDataManager.swift */,
+				0D4598E622D809F7007D634C /* AppDelegate+extension.swift */,
+				0D4598F022D80D02007D634C /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0D4598FB22D8116D007D634C /* MXCornerRadius */ = {
+			isa = PBXGroup;
+			children = (
+				0D4598FC22D8116D007D634C /* MXCornerRadius.h */,
+				0D4598FD22D8116D007D634C /* MXCornerRadius.m */,
+			);
+			path = MXCornerRadius;
+			sourceTree = "<group>";
+		};
+		0D48AA2222B5D426004F725E /* LifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				0D48AA2322B5D439004F725E /* VCLLogingViewController.swift */,
+			);
+			path = LifeCycle;
 			sourceTree = "<group>";
 		};
 		0DBE246E2289560D00B6BE75 /* SQLite */ = {
@@ -498,10 +549,13 @@
 				0D0004BD226AFB5D00BB073D /* Bundle+extension.swift in Sources */,
 				0D0004C7226AFB5D00BB073D /* UILabel+SCAddition.m in Sources */,
 				0DFB4FF8227978EE00A3AF63 /* UITableViewCell+extension.swift in Sources */,
+				0D4598EC22D80BCA007D634C /* CoreDataManager.swift in Sources */,
+				0D4598FE22D8116D007D634C /* MXCornerRadius.m in Sources */,
 				0D4478BC226D44890036D572 /* UIApplication+extension.swift in Sources */,
 				0D0004C5226AFB5D00BB073D /* UIScreen+UISCreen_extenshion.m in Sources */,
 				0D0004C3226AFB5D00BB073D /* UIImageView+SCAddition.m in Sources */,
 				0D0004C8226AFB5D00BB073D /* UIColor+SCAddition.m in Sources */,
+				0D4598E722D809F7007D634C /* AppDelegate+extension.swift in Sources */,
 				0DBE24712289560D00B6BE75 /* SCSQLiteManager.swift in Sources */,
 				0D0004BA226AFB5D00BB073D /* Date+extension.swift in Sources */,
 				0D0004C4226AFB5D00BB073D /* NSString+SCAddition.m in Sources */,
@@ -509,6 +563,7 @@
 				0D0004C1226AFB5D00BB073D /* UIButton+SCAddition.m in Sources */,
 				0D0004C0226AFB5D00BB073D /* UIBarButtonItem+extension.swift in Sources */,
 				0D0004BC226AFB5D00BB073D /* UIImage+extension.swift in Sources */,
+				0D4598F222D80D02007D634C /* Model.xcdatamodeld in Sources */,
 				0D0004B9226AFB5D00BB073D /* UIWindow+extension.swift in Sources */,
 				0D1F699E2283A3170092CAB0 /* NSAttributedString+extension.swift in Sources */,
 				0DCD701422B373520036A3D1 /* UIFont+extension.swift in Sources */,
@@ -522,9 +577,12 @@
 				0D0004BF226AFB5D00BB073D /* UIPageControl+extension.swift in Sources */,
 				0D7D3583226E95AE00533698 /* WKWebView+extension.swift in Sources */,
 				0D96B76A22815699004B161B /* UITableView+extension.swift in Sources */,
+				0D48AA2422B5D439004F725E /* VCLLogingViewController.swift in Sources */,
 				0D1F69D222840F110092CAB0 /* UINavigationController+extension.swift in Sources */,
 				0D0004BB226AFB5D00BB073D /* UILabel+extension.swift in Sources */,
+				0D45990422D815A8007D634C /* UIColor+WJObjcSugar.m in Sources */,
 				0D0004C2226AFB5D00BB073D /* NSObject+SCAddition.m in Sources */,
+				0D45990122D814C1007D634C /* UINavigationController+WJObjcSugar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,6 +892,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0D4598F022D80D02007D634C /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0D4598F122D80D02007D634C /* Model.xcdatamodel */,
+			);
+			currentVersion = 0D4598F122D80D02007D634C /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0D00045D226AFA8F00BB073D /* Project object */;
 }

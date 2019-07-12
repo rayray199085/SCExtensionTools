@@ -13,3 +13,6 @@
 #import "CABasicAnimation+SCAddition.h"
 #import "NSObject+SCAddition.h"
 #import "UIScreen+SCAddition.h"
+#import "MXCornerRadius.h"
+#import "UINavigationController+WJObjcSugar.h"
+#import "UIColor+WJObjcSugar.h"
