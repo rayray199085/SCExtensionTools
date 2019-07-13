@@ -35,6 +35,8 @@ class CoreDataManager: NSObject {
     
     func getAllPerson() -> [Person] {
         let fetchRequest: NSFetchRequest = Person.fetchRequest()
+        // for sort 
+        //fetchRequest.sortDescriptors = [sortDescriptor]
         do {
             let result = try context.fetch(fetchRequest)
             return result

@@ -50,7 +50,7 @@ class SCNetworkManager{
                 completion(res,isSuccess)
             }
         }else{
-            request(urlString: urlString, method: method, params: params) { (res, isSuccess, statusCode, _) in
+            request(urlString: urlString, method: method, params: params) { (_, res, isSuccess, statusCode, _) in
                 if statusCode == 403 {
                    // send notification for relogin
                     completion(nil,false)
@@ -67,19 +67,22 @@ class SCNetworkManager{
     ///   - method: get/ post
     ///   - params: parameters in dictionary
     ///   - completion: json(array/ dictionary), isSuccess, error
-    func request(urlString:String, method:HTTPMethod, params:[String:Any]?, completion :@escaping (_ response: Any?,_ isSuccess: Bool, _ statusCode: Int,_ error: Error?)->() ){
+    func request(urlString:String, method:HTTPMethod, params:[String:Any]?, completion :@escaping (_ data: Data?, _ response: Any?,_ isSuccess: Bool, _ statusCode: Int,_ error: Error?)->() ){
         Alamofire.request(urlString, method: method, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (dataResponse) in
             completion(
+                dataResponse.data,
                 dataResponse.result.value,
                 dataResponse.result.isSuccess,
                 dataResponse.response?.statusCode ?? -1,
                 dataResponse.result.error)
+            
         }
+        
     }
-    
-    func requestForResponseString(urlString:String, method:HTTPMethod, params:[String:Any]?, completion :@escaping (_ response: Any?,_ isSuccess: Bool, _ statusCode: Int,_ error: Error?)->() ){
+    func requestForResponseString(urlString:String, method:HTTPMethod, params:[String:Any]?, completion :@escaping (_ data: Data?, _ response: Any?,_ isSuccess: Bool, _ statusCode: Int,_ error: Error?)->() ){
         Alamofire.request(urlString, method: method, parameters: params, encoding: URLEncoding.default, headers: nil).responseString { (dataResponse) in
             completion(
+                dataResponse.data,
                 dataResponse.result.value,
                 dataResponse.result.isSuccess,
                 dataResponse.response?.statusCode ?? -1,

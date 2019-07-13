@@ -15,7 +15,7 @@ extension UIImageView{
     ///   - urlString: image url string
     ///   - placeholderImage: placeholder
     ///   - isAvatar: ture if this image is used for avatar
-    func setImage(urlString: String?,backgroundColor: UIColor,placeholderImage: UIImage?, isAvatar:Bool = false, frameColor: UIColor = UIColor.lightGray){
+    func setImage(urlString: String?,placeholderImage: UIImage?, isAvatar:Bool = false){
         guard let imageUrlString = urlString,
             let url = URL(string: imageUrlString) else {
                 image = placeholderImage
@@ -25,10 +25,24 @@ extension UIImageView{
             
         }) { [weak self] (image, error, cacheType, imageURL) in//UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL
             if isAvatar{
-                self?.image = image?.setCircleImage(size: self?.bounds.size, backgroundColor: backgroundColor, hasFrame: true, frameColor: frameColor)
+                guard let height = self?.bounds.height else{
+                    return
+                }
+                self?.cornerRadius(radius: height / 2)
             }else{
-                self?.image = image?.modifyImageSize(size: self?.bounds.size)
+                self?.image = image?.modifyImageSize(newSize: self?.bounds.size)
             }
         }
+    }
+    func cornerRadius(radius:CGFloat){
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
+        let ctx = UIGraphicsGetCurrentContext()
+        ctx!.addEllipse(in: bounds)
+        ctx!.clip()
+        image!.draw(in: bounds)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        image = newImage
     }
 }

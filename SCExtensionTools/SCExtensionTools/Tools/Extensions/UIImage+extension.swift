@@ -17,53 +17,59 @@ extension UIImage{
     ///   - size: imageView.bounds.size
     ///   - backgroundColor: parent view color, default is white
     /// - Returns: an image with new size
-    func modifyImageSize(size:CGSize?, backgroundColor: UIColor = UIColor.white) -> UIImage? {
-        var size = size
-        if size == nil{
-            size = self.size
+    func modifyImageSize(newSize:CGSize?) -> UIImage? {
+        guard let newSize = newSize else{
+            return nil
         }
-        let rect = CGRect(origin: CGPoint(), size: size!)
-        UIGraphicsBeginImageContextWithOptions(size!, true, 0)
-        backgroundColor.setFill()
-        UIRectFill(rect)
-        draw(in: rect)
-        let result = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return result
+        let imageSize = size
+        let width = imageSize.width
+        let height = imageSize.height
+        
+        let widthFactor = newSize.width/width
+        let heightFactor = newSize.height/height
+        let scalerFactor = (widthFactor < heightFactor) ? widthFactor : heightFactor
+        
+        let scaledWidth = width * scalerFactor
+        let scaledHeight = height * scalerFactor
+        let targetSize = CGSize(width: scaledWidth, height: scaledHeight)
+        
+        UIGraphicsBeginImageContext(targetSize)
+        draw(in: CGRect(x: 0, y: 0, width: scaledWidth, height: scaledHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        return newImage!
     }
     
-    /// make a circle image
-    ///
-    /// - Parameters:
-    ///   - size: imageView.bounds.size
-    ///   - backgroundColor: parent view color
-    ///   - hasFrame: with a frame width is 2
-    ///   - frameColor: default color is orange
-    /// - Returns: image in a circle
-    func setCircleImage(size:CGSize?, backgroundColor: UIColor = UIColor.white, hasFrame: Bool, frameColor : UIColor = UIColor.orange)-> UIImage?{
-        var size = size
-        if size == nil || size?.width == 0 {
-            size = CGSize(width: 34, height: 34)
-        }
-        let rect = CGRect(origin: CGPoint(), size: size!)
-        UIGraphicsBeginImageContextWithOptions(rect.size, true, 0)
-        backgroundColor.setFill()
-        UIRectFill(rect)
-        // only image which stays in the path left
-        let path = UIBezierPath(ovalIn: rect)
-        path.addClip()
-        draw(in: rect)
+    func circleFaviconWithFromQuqrtz2D(borderWidth: CGFloat, borderColor: UIColor) -> UIImage {
         
-        if hasFrame{
-            let ovalPath = UIBezierPath(ovalIn: rect)
-            frameColor.setStroke()
-            ovalPath.lineWidth = 2
-            ovalPath.stroke()
-        }
+        let imageW: CGFloat = size.width + 22 * borderWidth
+        let imageH: CGFloat = size.height + 22 * borderWidth
+        let imageSize = CGSize.init(width: imageW, height: imageH)
+        UIGraphicsBeginImageContextWithOptions(imageSize, false, 0.0)
         
-        let result = UIGraphicsGetImageFromCurrentImageContext()
+        let context = UIGraphicsGetCurrentContext()
+        
+        borderColor.set()
+        let bigRadius: CGFloat = imageW * 0.5
+        let centerX = bigRadius
+        let centerY = bigRadius
+        let center = CGPoint.init(x: centerX, y: centerY)
+        let endAngle = CGFloat(Double.pi * 2)
+        
+        context?.addArc(center: center, radius: bigRadius, startAngle: 0, endAngle: endAngle, clockwise: false)
+        context?.fillPath()
+        
+        let smallRadius = bigRadius - borderWidth
+        context?.addArc(center: center, radius: smallRadius, startAngle: 0, endAngle: endAngle, clockwise: false)
+        context?.clip()
+        
+        draw(in: CGRect.init(x: borderWidth, y: borderWidth, width: size.width, height: size.height))
+        
+        let circleFavicon = UIGraphicsGetImageFromCurrentImageContext()
+        
         UIGraphicsEndImageContext()
-        return result
+        
+        return circleFavicon!
     }
 }
 extension UIImage{
