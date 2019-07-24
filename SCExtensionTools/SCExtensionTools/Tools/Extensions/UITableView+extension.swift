@@ -18,6 +18,19 @@ extension UITableView {
         })
     }
     
+    func hideSeparatorWhenEmpty(count: Int){
+        separatorStyle = count > 0 ? UITableViewCell.SeparatorStyle.singleLine : .none
+    }
+    
+    func cancelAllSelections(){
+        for section in 0..<numberOfSections{
+            for row in 0..<numberOfRows(inSection: section){
+                let cell = cellForRow(at: IndexPath(row: row, section: section))
+                cell?.isSelected = false
+            }
+        }
+    }
+    
     func scroll(to: scrollsTo, animated: Bool) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
             let numberOfSections = self.numberOfSections
@@ -41,5 +54,8 @@ extension UITableView {
     
     enum scrollsTo {
         case top,bottom
+    }
+    func scroll2Top(){
+        scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
     }
 }
