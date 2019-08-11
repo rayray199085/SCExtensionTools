@@ -138,3 +138,13 @@ extension String{
         return false
     }
 }
+extension String{
+    func convertCountryCode2EmojiFlag()->String{
+        let base : UInt32 = 127397
+        var s = ""
+        for v in self.unicodeScalars {
+            s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
+        }
+        return String(s)
+    }
+}

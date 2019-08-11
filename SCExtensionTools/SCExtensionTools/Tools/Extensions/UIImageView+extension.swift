@@ -15,7 +15,7 @@ extension UIImageView{
     ///   - urlString: image url string
     ///   - placeholderImage: placeholder
     ///   - isAvatar: ture if this image is used for avatar
-    func setImage(urlString: String?,placeholderImage: UIImage?, isAvatar:Bool = false){
+    func setImage(urlString: String?,placeholderImage: UIImage?,cornerRadius: CGFloat = 0, isAvatar:Bool = false){
         guard let imageUrlString = urlString,
             let url = URL(string: imageUrlString) else {
                 image = placeholderImage
@@ -30,7 +30,7 @@ extension UIImageView{
                 }
                 self?.cornerRadius(radius: height / 2)
             }else{
-                self?.image = image?.modifyImageSize(newSize: self?.bounds.size)
+                self?.image = image?.modifyImageSize(newSize: self?.bounds.size, cornerRadius: cornerRadius)
             }
         }
     }

@@ -47,6 +47,11 @@
 		0DBE24712289560D00B6BE75 /* SCSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE246F2289560D00B6BE75 /* SCSQLiteManager.swift */; };
 		0DBE24722289560D00B6BE75 /* mydata.sql in Resources */ = {isa = PBXBuildFile; fileRef = 0DBE24702289560D00B6BE75 /* mydata.sql */; };
 		0DCD701422B373520036A3D1 /* UIFont+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCD701322B373520036A3D1 /* UIFont+extension.swift */; };
+		0DD1988C22F527820078B320 /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1988B22F527820078B320 /* Data+extension.swift */; };
+		0DED77B322FBCBE400A587A7 /* ExpandableLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DED77AF22FBCBE300A587A7 /* ExpandableLabelCell.xib */; };
+		0DED77B422FBCBE400A587A7 /* ExpandableTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DED77B022FBCBE300A587A7 /* ExpandableTableView.xib */; };
+		0DED77B522FBCBE400A587A7 /* ExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED77B122FBCBE300A587A7 /* ExpandableTableView.swift */; };
+		0DED77B622FBCBE400A587A7 /* ExpandableLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED77B222FBCBE300A587A7 /* ExpandableLabelCell.swift */; };
 		0DEE54EF2285543A0045FE6C /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE54EE2285543A0045FE6C /* UIViewController+extension.swift */; };
 		0DF4FF7B22EAD41C0087A528 /* UIScrollView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4FF7A22EAD41C0087A528 /* UIScrollView+extension.swift */; };
 		0DFB4FF8227978EE00A3AF63 /* UITableViewCell+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB4FF7227978ED00A3AF63 /* UITableViewCell+extension.swift */; };
@@ -131,6 +136,11 @@
 		0DBE246F2289560D00B6BE75 /* SCSQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCSQLiteManager.swift; sourceTree = "<group>"; };
 		0DBE24702289560D00B6BE75 /* mydata.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mydata.sql; sourceTree = "<group>"; };
 		0DCD701322B373520036A3D1 /* UIFont+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extension.swift"; sourceTree = "<group>"; };
+		0DD1988B22F527820078B320 /* Data+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+extension.swift"; sourceTree = "<group>"; };
+		0DED77AF22FBCBE300A587A7 /* ExpandableLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandableLabelCell.xib; sourceTree = "<group>"; };
+		0DED77B022FBCBE300A587A7 /* ExpandableTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandableTableView.xib; sourceTree = "<group>"; };
+		0DED77B122FBCBE300A587A7 /* ExpandableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableView.swift; sourceTree = "<group>"; };
+		0DED77B222FBCBE300A587A7 /* ExpandableLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableLabelCell.swift; sourceTree = "<group>"; };
 		0DEE54EE2285543A0045FE6C /* UIViewController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		0DF4FF7A22EAD41C0087A528 /* UIScrollView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+extension.swift"; sourceTree = "<group>"; };
 		0DFB4FF7227978ED00A3AF63 /* UITableViewCell+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+extension.swift"; sourceTree = "<group>"; };
@@ -221,6 +231,7 @@
 		0D000496226AFB0400BB073D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0DED77AE22FBCBE300A587A7 /* Expandable Views */,
 				0D4598FB22D8116D007D634C /* MXCornerRadius */,
 				0D4598EA22D80BB7007D634C /* CoreData */,
 				0D48AA2222B5D426004F725E /* LifeCycle */,
@@ -245,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				0DF4FF7A22EAD41C0087A528 /* UIScrollView+extension.swift */,
+				0DD1988B22F527820078B320 /* Data+extension.swift */,
 				0DFC175622DD42AA00F3F95F /* Double+extension.swift */,
 				0DEE54EE2285543A0045FE6C /* UIViewController+extension.swift */,
 				0D1F69D122840F110092CAB0 /* UINavigationController+extension.swift */,
@@ -347,6 +359,17 @@
 				0DBE24702289560D00B6BE75 /* mydata.sql */,
 			);
 			path = SQLite;
+			sourceTree = "<group>";
+		};
+		0DED77AE22FBCBE300A587A7 /* Expandable Views */ = {
+			isa = PBXGroup;
+			children = (
+				0DED77AF22FBCBE300A587A7 /* ExpandableLabelCell.xib */,
+				0DED77B022FBCBE300A587A7 /* ExpandableTableView.xib */,
+				0DED77B122FBCBE300A587A7 /* ExpandableTableView.swift */,
+				0DED77B222FBCBE300A587A7 /* ExpandableLabelCell.swift */,
+			);
+			path = "Expandable Views";
 			sourceTree = "<group>";
 		};
 		965F72486D67A12B311819FC /* Pods */ = {
@@ -474,6 +497,8 @@
 			files = (
 				0DBE24722289560D00B6BE75 /* mydata.sql in Resources */,
 				0D000470226AFA9300BB073D /* Assets.xcassets in Resources */,
+				0DED77B322FBCBE400A587A7 /* ExpandableLabelCell.xib in Resources */,
+				0DED77B422FBCBE400A587A7 /* ExpandableTableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +591,9 @@
 				0D0004BA226AFB5D00BB073D /* Date+extension.swift in Sources */,
 				0D0004C4226AFB5D00BB073D /* NSString+SCAddition.m in Sources */,
 				0D0004CD226AFCD600BB073D /* FFLabel.swift in Sources */,
+				0DD1988C22F527820078B320 /* Data+extension.swift in Sources */,
 				0DF4FF7B22EAD41C0087A528 /* UIScrollView+extension.swift in Sources */,
+				0DED77B522FBCBE400A587A7 /* ExpandableTableView.swift in Sources */,
 				0D0004C1226AFB5D00BB073D /* UIButton+SCAddition.m in Sources */,
 				0D0004C0226AFB5D00BB073D /* UIBarButtonItem+extension.swift in Sources */,
 				0D0004BC226AFB5D00BB073D /* UIImage+extension.swift in Sources */,
@@ -575,6 +602,7 @@
 				0D1F699E2283A3170092CAB0 /* NSAttributedString+extension.swift in Sources */,
 				0DCD701422B373520036A3D1 /* UIFont+extension.swift in Sources */,
 				0DEE54EF2285543A0045FE6C /* UIViewController+extension.swift in Sources */,
+				0DED77B622FBCBE400A587A7 /* ExpandableLabelCell.swift in Sources */,
 				0D0004C6226AFB5D00BB073D /* CABasicAnimation+SCAddition.m in Sources */,
 				0D0004BE226AFB5D00BB073D /* String+extension.swift in Sources */,
 				0D0004B8226AFB5D00BB073D /* UIImageView+extension.swift in Sources */,

@@ -17,7 +17,7 @@ extension UIImage{
     ///   - size: imageView.bounds.size
     ///   - backgroundColor: parent view color, default is white
     /// - Returns: an image with new size
-    func modifyImageSize(newSize:CGSize?) -> UIImage? {
+    func modifyImageSize(newSize:CGSize?, cornerRadius: CGFloat = 0) -> UIImage? {
         guard let newSize = newSize else{
             return nil
         }
@@ -33,10 +33,14 @@ extension UIImage{
         let scaledHeight = height * scalerFactor
         let targetSize = CGSize(width: scaledWidth, height: scaledHeight)
         
+        let imageBound = CGRect(x: 0, y: 0, width: scaledWidth, height: scaledHeight)
         UIGraphicsBeginImageContext(targetSize)
-        draw(in: CGRect(x: 0, y: 0, width: scaledWidth, height: scaledHeight))
+        if cornerRadius > 0{
+            let bezierPath = UIBezierPath(roundedRect: imageBound, cornerRadius: 5)
+            bezierPath.addClip()
+        }
+        draw(in: imageBound)
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        
         return newImage!
     }
     
