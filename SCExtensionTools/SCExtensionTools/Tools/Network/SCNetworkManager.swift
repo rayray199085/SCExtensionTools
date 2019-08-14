@@ -11,8 +11,9 @@ import Alamofire
 
 class SCNetworkManager{
     static let shared = SCNetworkManager()
-    var access_token: String?
     
+    var userLogon: Bool = false
+   
     private init() {
         
     }
@@ -26,40 +27,40 @@ class SCNetworkManager{
     ///   - name: name in server, like: "pic" for upload
     ///   - data: file in data for upload
     ///   - completion: json(array/ dictionary), isSuccess
-    func requestWithToken(urlString: String,method: HTTPMethod,params:[String:Any]?, name: String? = nil, data: Data? = nil, completion:@escaping (_ list:Any?, _ isSuccess: Bool)->()){
-        guard let token = access_token else{
-            // send notification for relogin
-            completion(nil,false)
-            return
-        }
-        var params = params
-        if params == nil{
-            params = [String:Any]()
-        }
-        params?["access_token"] = token
-        
+    func requestWithToken(urlString: String,method: HTTPMethod,params:[String:Any]?, headers: [String: String], name: String? = nil, dataList: [Data]? = nil, completion:@escaping (_ data: Data?, _ list:Any?, _ isSuccess: Bool)->()){
         if let name = name,
-            let data = data{
+            let dataList = dataList{
             // if name & data are not nil, use upload function
-            upload(urlString: urlString, name: name, params: params, data: data) { (res, isSuccess, statusCode, _) in
-                if statusCode == 403 {
+            upload(urlString: urlString, name: name, params: params, dataList: dataList, headers: headers) { (data, res, isSuccess, statusCode, _) in
+                if statusCode == 400 {
                     // send notification for relogin
-                    completion(nil,false)
+                    completion(nil,nil,false)
                     return
                 }
-                completion(res,isSuccess)
+                completion(data,res,isSuccess)
             }
         }else{
-            request(urlString: urlString, method: method, params: params) { (_, res, isSuccess, statusCode, _) in
-                if statusCode == 403 {
-                   // send notification for relogin
-                    completion(nil,false)
+            requestInHeader(urlString: urlString, method: method, params: params,headers: headers) { (data, res, isSuccess, statusCode, _) in
+                if statusCode == 400 {
+                    // send notification for relogin
+                    completion(nil,nil,false)
                     return
                 }
-                completion(res,isSuccess)
+                completion(data,res,isSuccess)
             }
         }
     }
+    func requestInHeader(urlString:String, method:HTTPMethod, params:[String:Any]?,headers: [String: String], completion :@escaping (_ data: Data?, _ response: Any?,_ isSuccess: Bool, _ statusCode: Int,_ error: Error?)->() ){
+        Alamofire.request(urlString, method: method, parameters: params, encoding: URLEncoding.default, headers: headers).responseJSON { (dataResponse) in
+            completion(
+                dataResponse.data,
+                dataResponse.result.value,
+                dataResponse.result.isSuccess,
+                dataResponse.response?.statusCode ?? -1,
+                dataResponse.result.error)
+        }
+    }
+    
     /// request method
     ///
     /// - Parameters:
@@ -77,7 +78,6 @@ class SCNetworkManager{
                 dataResponse.result.error)
             
         }
-        
     }
     func requestForResponseString(urlString:String, method:HTTPMethod, params:[String:Any]?, completion :@escaping (_ data: Data?, _ response: Any?,_ isSuccess: Bool, _ statusCode: Int,_ error: Error?)->() ){
         Alamofire.request(urlString, method: method, parameters: params, encoding: URLEncoding.default, headers: nil).responseString { (dataResponse) in
@@ -98,31 +98,38 @@ class SCNetworkManager{
     ///   - params: a dictionary for parameters
     ///   - data: file in data
     ///   - completion: response in json / nil
-    func upload(urlString: String, name: String, params: [String: Any]?,data: Data, completion:@escaping (_ response: Any?,_ isSuccess: Bool, _ statusCode: Int,_ error: Error?)->()){
+    func upload(urlString: String, name: String, params: [String: Any]?,dataList: [Data],headers: [String: String], completion:@escaping (_ data: Data?, _ response: Any?,_ isSuccess: Bool, _ statusCode: Int,_ error: Error?)->()){
         Alamofire.upload(multipartFormData: { (multipartFormData) in
-            multipartFormData.append(
-                data,
-                withName: name,
-                fileName: "xxxxxx",
-                mimeType: "application/octet-stream")
+            for imageData in dataList{
+                multipartFormData.append(
+                    imageData,
+                    withName: name,
+                    fileName: "\(Date().timeIntervalSince1970).png",
+                    mimeType: "application/octet-stream")
+            }
             for (key,value) in params ?? [:]{
                 multipartFormData.append(
                     (value as! String).data(using: String.Encoding.utf8)!,
                     withName: key)
             }
-        }, to: urlString) { (encodingResult) in
+        }, usingThreshold: UInt64.init(),
+           to: urlString,
+           method: .post,
+           headers: headers) { (encodingResult) in
             switch encodingResult {
             case .success(let upload, _, _):
                 upload.responseJSON { response in
                     completion(
+                        response.data,
                         response.result.value,
                         response.result.isSuccess,
                         response.response?.statusCode ?? -1,
                         response.result.error)
                 }
             case .failure(let encodingError):
-                completion(nil, false, -1, encodingError)
+                completion(nil, nil, false, -1, encodingError)
             }
         }
     }
 }
+

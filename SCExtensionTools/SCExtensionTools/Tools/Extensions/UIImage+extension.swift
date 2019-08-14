@@ -44,42 +44,41 @@ extension UIImage{
         return newImage!
     }
     
-    func circleFaviconWithFromQuqrtz2D(borderWidth: CGFloat, borderColor: UIColor) -> UIImage {
-        
-        let imageW: CGFloat = size.width + 22 * borderWidth
-        let imageH: CGFloat = size.height + 22 * borderWidth
-        let imageSize = CGSize.init(width: imageW, height: imageH)
-        UIGraphicsBeginImageContextWithOptions(imageSize, false, 0.0)
-        
-        let context = UIGraphicsGetCurrentContext()
-        
-        borderColor.set()
-        let bigRadius: CGFloat = imageW * 0.5
-        let centerX = bigRadius
-        let centerY = bigRadius
-        let center = CGPoint.init(x: centerX, y: centerY)
-        let endAngle = CGFloat(Double.pi * 2)
-        
-        context?.addArc(center: center, radius: bigRadius, startAngle: 0, endAngle: endAngle, clockwise: false)
-        context?.fillPath()
-        
-        let smallRadius = bigRadius - borderWidth
-        context?.addArc(center: center, radius: smallRadius, startAngle: 0, endAngle: endAngle, clockwise: false)
-        context?.clip()
-        
-        draw(in: CGRect.init(x: borderWidth, y: borderWidth, width: size.width, height: size.height))
-        
-        let circleFavicon = UIGraphicsGetImageFromCurrentImageContext()
-        
-        UIGraphicsEndImageContext()
-        
-        return circleFavicon!
-    }
 }
 extension UIImage{
     static func downloadImage(url: URL, completion: @escaping (_ image: UIImage?)->()){
         SDWebImageManager.shared().loadImage(with: url, options: [], progress: nil) { (image, _, _, _, _, _) in
             completion(image)
         }
+    }
+}
+extension UIImage {
+    
+    func circularImage(size: CGSize?) -> UIImage?{
+        let newSize = size ?? self.size
+        
+        let minEdge = min(newSize.height, newSize.width)
+        let size = CGSize(width: minEdge, height: minEdge)
+        
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        guard let context = UIGraphicsGetCurrentContext() else{
+            return nil
+        }
+        
+        self.draw(in: CGRect(origin: CGPoint.zero, size: size), blendMode: .copy, alpha: 1.0)
+        
+        context.setBlendMode(.copy)
+        context.setFillColor(UIColor.clear.cgColor)
+        
+        let rectPath = UIBezierPath(rect: CGRect(origin: CGPoint.zero, size: size))
+        let circlePath = UIBezierPath(ovalIn: CGRect(origin: CGPoint.zero, size: size))
+        rectPath.append(circlePath)
+        rectPath.usesEvenOddFillRule = true
+        rectPath.fill()
+        
+        let result = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return result
     }
 }
