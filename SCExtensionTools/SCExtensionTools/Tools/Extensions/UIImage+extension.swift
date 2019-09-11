@@ -34,7 +34,7 @@ extension UIImage{
         let targetSize = CGSize(width: scaledWidth, height: scaledHeight)
         
         let imageBound = CGRect(x: 0, y: 0, width: scaledWidth, height: scaledHeight)
-        UIGraphicsBeginImageContext(targetSize)
+        UIGraphicsBeginImageContextWithOptions(targetSize, true, UIScreen.main.scale)
         if cornerRadius > 0{
             let bezierPath = UIBezierPath(roundedRect: imageBound, cornerRadius: 5)
             bezierPath.addClip()

@@ -33,6 +33,7 @@
 		0D1F699E2283A3170092CAB0 /* NSAttributedString+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1F699D2283A3170092CAB0 /* NSAttributedString+extension.swift */; };
 		0D1F69D222840F110092CAB0 /* UINavigationController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1F69D122840F110092CAB0 /* UINavigationController+extension.swift */; };
 		0D3652342280227600C2ECC6 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3652332280227600C2ECC6 /* UIView+extension.swift */; };
+		0D3809C3231973F500740926 /* UIImage+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3809C2231973F500740926 /* UIImage+SCAddition.m */; };
 		0D4478BC226D44890036D572 /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4478BB226D44890036D572 /* UIApplication+extension.swift */; };
 		0D4598E722D809F7007D634C /* AppDelegate+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4598E622D809F7007D634C /* AppDelegate+extension.swift */; };
 		0D4598EC22D80BCA007D634C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4598EB22D80BCA007D634C /* CoreDataManager.swift */; };
@@ -119,6 +120,8 @@
 		0D1F699D2283A3170092CAB0 /* NSAttributedString+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+extension.swift"; sourceTree = "<group>"; };
 		0D1F69D122840F110092CAB0 /* UINavigationController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+extension.swift"; sourceTree = "<group>"; };
 		0D3652332280227600C2ECC6 /* UIView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		0D3809C1231973F500740926 /* UIImage+SCAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCAddition.h"; sourceTree = "<group>"; };
+		0D3809C2231973F500740926 /* UIImage+SCAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCAddition.m"; sourceTree = "<group>"; };
 		0D4478BB226D44890036D572 /* UIApplication+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
 		0D4598E622D809F7007D634C /* AppDelegate+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+extension.swift"; sourceTree = "<group>"; };
 		0D4598EB22D80BCA007D634C /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 		0D0004A4226AFB5D00BB073D /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				0D3809C1231973F500740926 /* UIImage+SCAddition.h */,
+				0D3809C2231973F500740926 /* UIImage+SCAddition.m */,
 				0D45990322D815A8007D634C /* UIColor+WJObjcSugar.h */,
 				0D45990222D815A8007D634C /* UIColor+WJObjcSugar.m */,
 				0D45990022D814C0007D634C /* UINavigationController+WJObjcSugar.h */,
@@ -589,6 +594,7 @@
 				0D4598E722D809F7007D634C /* AppDelegate+extension.swift in Sources */,
 				0DBE24712289560D00B6BE75 /* SCSQLiteManager.swift in Sources */,
 				0D0004BA226AFB5D00BB073D /* Date+extension.swift in Sources */,
+				0D3809C3231973F500740926 /* UIImage+SCAddition.m in Sources */,
 				0D0004C4226AFB5D00BB073D /* NSString+SCAddition.m in Sources */,
 				0D0004CD226AFCD600BB073D /* FFLabel.swift in Sources */,
 				0DD1988C22F527820078B320 /* Data+extension.swift in Sources */,

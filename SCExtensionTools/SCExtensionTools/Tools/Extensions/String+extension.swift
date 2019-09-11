@@ -148,3 +148,9 @@ extension String{
         return String(s)
     }
 }
+extension String{
+    func onlyContainingDigits()->Bool{
+        return CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: self))
+    }
+}
+

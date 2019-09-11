@@ -15,3 +15,4 @@
 #import "UIScreen+SCAddition.h"
 #import "UINavigationController+WJObjcSugar.h"
 #import "UIColor+WJObjcSugar.h"
+#import "UIImage+SCAddition.h"

@@ -88,15 +88,4 @@ extension UIViewController{
         view.layer.add(animation, forKey: "animation")
         
     }
-    
-    // MARK: UIView实现动画
-    func animationWithView(_ duration: Double, view:UIView,withAnimationTransition transition:UIView.AnimationTransition){
-        
-        UIView.animate(withDuration: duration, animations: {
-            
-            UIView.setAnimationCurve(UIView.AnimationCurve.easeInOut)
-            UIView.setAnimationTransition(transition, for: view, cache: true)
-            
-        })
-    }
 }
