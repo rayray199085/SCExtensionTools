@@ -104,8 +104,8 @@ class SCNetworkManager{
                 multipartFormData.append(
                     imageData,
                     withName: name,
-                    fileName: "\(Date().timeIntervalSince1970).png",
-                    mimeType: "application/octet-stream")
+                    fileName: "\(Date().toLocalTime().timeIntervalSince1970).jpg",
+                    mimeType: "image/jpeg")
             }
             for (key,value) in params ?? [:]{
                 multipartFormData.append(

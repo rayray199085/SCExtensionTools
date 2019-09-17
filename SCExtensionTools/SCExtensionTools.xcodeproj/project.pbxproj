@@ -42,6 +42,7 @@
 		0D45990122D814C1007D634C /* UINavigationController+WJObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4598FF22D814C0007D634C /* UINavigationController+WJObjcSugar.m */; };
 		0D45990422D815A8007D634C /* UIColor+WJObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D45990222D815A8007D634C /* UIColor+WJObjcSugar.m */; };
 		0D48AA2422B5D439004F725E /* VCLLogingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D48AA2322B5D439004F725E /* VCLLogingViewController.swift */; };
+		0D64A843232B763A00BFE0BF /* SCCopyableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64A842232B763A00BFE0BF /* SCCopyableLabel.swift */; };
 		0D7D3583226E95AE00533698 /* WKWebView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D3582226E95AE00533698 /* WKWebView+extension.swift */; };
 		0D8538532296A0F6002FC6B1 /* UITabBarController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8538522296A0F6002FC6B1 /* UITabBarController+extension.swift */; };
 		0D96B76A22815699004B161B /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D96B76922815699004B161B /* UITableView+extension.swift */; };
@@ -133,6 +134,7 @@
 		0D45990222D815A8007D634C /* UIColor+WJObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WJObjcSugar.m"; sourceTree = "<group>"; };
 		0D45990322D815A8007D634C /* UIColor+WJObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WJObjcSugar.h"; sourceTree = "<group>"; };
 		0D48AA2322B5D439004F725E /* VCLLogingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCLLogingViewController.swift; sourceTree = "<group>"; };
+		0D64A842232B763A00BFE0BF /* SCCopyableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCopyableLabel.swift; sourceTree = "<group>"; };
 		0D7D3582226E95AE00533698 /* WKWebView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+extension.swift"; sourceTree = "<group>"; };
 		0D8538522296A0F6002FC6B1 /* UITabBarController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+extension.swift"; sourceTree = "<group>"; };
 		0D96B76922815699004B161B /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		0D000496226AFB0400BB073D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0D64A842232B763A00BFE0BF /* SCCopyableLabel.swift */,
 				0DED77AE22FBCBE300A587A7 /* Expandable Views */,
 				0D4598FB22D8116D007D634C /* MXCornerRadius */,
 				0D4598EA22D80BB7007D634C /* CoreData */,
@@ -601,6 +604,7 @@
 				0DF4FF7B22EAD41C0087A528 /* UIScrollView+extension.swift in Sources */,
 				0DED77B522FBCBE400A587A7 /* ExpandableTableView.swift in Sources */,
 				0D0004C1226AFB5D00BB073D /* UIButton+SCAddition.m in Sources */,
+				0D64A843232B763A00BFE0BF /* SCCopyableLabel.swift in Sources */,
 				0D0004C0226AFB5D00BB073D /* UIBarButtonItem+extension.swift in Sources */,
 				0D0004BC226AFB5D00BB073D /* UIImage+extension.swift in Sources */,
 				0D4598F222D80D02007D634C /* Model.xcdatamodeld in Sources */,
@@ -784,6 +788,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SCExtensionTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -804,6 +809,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SCExtensionTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
